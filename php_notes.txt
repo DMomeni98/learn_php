@@ -1,0 +1,33 @@
+already using prots:
+netstat -ntlp
+netstat-plnt
+kill -9 PID
+***
+use built-in php server instead of apache:
+php -S localhost:8000 path/file
+run php:
+$ php path/file
+***
+steps to install php:
+$ sudo apt-get install apache2
+in browser: localhost
+$ sudo apt-get install mysql-server
+$ sudo mysql_secure_installation
+log in mysql:
+ sudo mysql -u root -p
+install php:
+$ sudo apt-get install php libapache2-mod-php
+show php info:
+<?php phpinfo(); ?>
+$ sudo apt install phpmyadmin
+***
+run php in terminal ex:
+php -r 'echo "fellan";'
+***
+sudo systemctl restart apache2
+sudo service apache2 status
+which apache2
+***
+ip addr show 
+host myip.opendns.com resolver1.opendns.com
+***
