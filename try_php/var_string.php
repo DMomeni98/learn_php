@@ -3,7 +3,7 @@
     <head>
     </head> 
     <body>
-        <?php $var = 'world'; ?>
-        <p> <?php echo 'hello '.$var; ?></p>
+        <?php $var = '174'; ?>
+        <p> <?php echo 'height: '.$var; ?></p>
     </body>
 </html>
