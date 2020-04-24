@@ -33,7 +33,7 @@
         } else {
             $langs = $_POST['langs'];
         }
-        if (!isset($_POST['tp']) || $_POST['ps'] === '') {
+        if (!isset($_POST['tp']) || $_POST['tp'] === '') {
             $is_valid = false;
         } else {
             $tp = $_POST['tp'];
@@ -54,7 +54,7 @@
             htmlspecialchars($tp, ENT_QUOTES));
         }
         else {
-            echo 'empty field detected';
+            echo '<br/>empty field detected<br/><br/>';
         }
     }
 ?>
@@ -63,26 +63,62 @@
 <html>
     <body>
         <form action="" method="post">
-        UserName: <input type="text" name="user"><br>
+        UserName: <input type="text" name="user" value="<?php 
+            echo htmlspecialchars($user, ENT_QUOTES);?>"><br>
         PassWord: <input type="password" name="ps"><br>
-        Gender: <input type="radio" name="gender" value="m"> male
-                <input type="radio" name="gender" value="f"> female
-                <br>
+        Gender: <input type="radio" name="gender" value="m"<?php
+            if ($gender === 'm') {
+                echo ' checked';
+            }
+            ?>> male
+                <input type="radio" name="gender" value="f"<?php
+            if ($gender === 'f') {
+                echo ' checked';
+            }
+            ?>> female  <br>
         Favorrite football team:
         <select name="fft">
             <option value="">please choose one item</option>
-            <option value="rmfc">Real Madrid FC</option>
-            <option value="bfc">Barcelona FC</option>
-            <option value="Mufc">Manchester United FC</option>
+            <option value="rmfc"<?php
+            if ($fft === 'rmfc') {
+                echo ' selected';
+            }
+            ?>>Real Madrid FC</option>
+            <option value="bfc"<?php
+            if ($fft === 'bfc') {
+                echo ' selected';
+            }
+            ?>>Barcelona FC</option>
+            <option value="mufc"<?php
+            if ($fft === 'mufc') {
+                echo ' selected';
+            }
+            ?>>Manchester United FC</option>
         </select><br>
         langueses:
         <select multiple name="langs[]" size="3">
-            <option value="En">English</option>
-            <option value="Fr">Francais</option>
-            <option value="Pr">Farsi</option>
+            <option value="En"<?php
+             if (in_array('En', $langs)){
+                echo ' selected';
+             }
+             ?>>English</option>
+            <option value="Fr"<?php
+             if (in_array('Fr', $langs)){
+                echo ' selected';
+             }
+             ?>>Francais</option>
+            <option value="Pr"<?php
+             if (in_array('Pr', $langs)){
+                echo ' selected';
+             }
+             ?>>Farsi</option>
         </select><br>
         I accept terms&apm;policies:
-        <input type="checkbox" name='tp' value="ok">
+        <input type="checkbox" name='tp' value="ok"<?php 
+            if ($tp === 'ok'){
+                echo ' checked';
+            }
+        ?>>
         <input type="submit" name="submit" value="submit">
         </form>
     </body>
