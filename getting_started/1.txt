@@ -1,0 +1,12 @@
+never save config file as .inc
+if someone guesses the file name beacause it's not .php
+could easyly see crediantials.
+***
+best storing method for passwords: hash!_
+***
+$result=fetch_object();
+$result=fetch_assoc();
+***
+$variable = "test";
+<title> php fundamentals - <?=$variable?>
+***
