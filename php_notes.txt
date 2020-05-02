@@ -49,3 +49,5 @@ $result=fetch_assoc();
 $variable = "test";
 <title> php fundamentals - <?=$variable?>
 ***
+check php installed extentions:
+$ php -m or php -i
