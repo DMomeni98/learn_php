@@ -51,3 +51,10 @@ $variable = "test";
 ***
 check php installed extentions:
 $ php -m or php -i
+***
+if we want to have our website folder somewhere else (not /var/www/html) we do this:
+
+$ sudo ln -s /path/to/desired/directory /var/www/html/desired-dir-name
+to see details to symlink:
+
+$ sudo ls -al /var/www/html
