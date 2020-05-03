@@ -36,3 +36,25 @@ if using xampp deafult directory for files is:
 /opt/lampp/htdocs. Don't use var/www or var/www/html any more
 ***
 alias xampp='sudo /opt/lampp/manager-linux-x64.run
+***
+never save config file as .inc
+if someone guesses the file name beacause it's not .php
+could easyly see crediantials.
+***
+best storing method for passwords: hash!_
+***
+$result=fetch_object();
+$result=fetch_assoc();
+***
+$variable = "test";
+<title> php fundamentals - <?=$variable?>
+***
+check php installed extentions:
+$ php -m or php -i
+***
+if we want to have our website folder somewhere else (not /var/www/html) we do this:
+
+$ sudo ln -s /path/to/desired/directory /var/www/html/desired-dir-name
+to see details to symlink:
+
+$ sudo ls -al /var/www/html
